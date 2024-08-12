@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+/* Import de la font Syne depuis Google Fonts et on l'applique sur tous les éléments de la page */
+body * {
+   font-family: 'syne', sans-serif;
+}
+
+
+
+
+
+
+/* FOOTER */
+
+/* Les deux bt */
+li.menu-item a {
+   height: 80px !important;
+   display: inline-block;
+   font-size: 16px;
+   text-align: center;
+   padding-left: 60px !important;
+   padding-right: 60px !important;
+ }
+   
+ li.menu-item a:hover {
+   text-decoration: none !important;
+ }
+   
+ /* bt Nous rencontrer */
+ li.menu-item-25 a {
+   color: #000000 !important;
+ }
+   
+ li.menu-item-25 a:hover {
+   color: #000000 !important;
+   font-weight: 700;
+ }
+   
+ /* bt commander */
+ li.menu-item-24 a {
+   color: #ffffff !important;
+   background-color: #DC9F96;
+   font-weight: 700;
+ }
+   
+ li.menu-item-24 a:hover {
+   color: #ffffff !important;
+   background-color: #C02E44;
+   font-weight: 700;
+ }
+
+
+
+
+
+/* FOOTER */
+
+.contenuFooter {
+   height: 60px !important;
+   width: 100%;
+   align-content: center;
+   text-align: center;
+   font-size: 16px;
+   background-color: #ffffff !important;
+ }
