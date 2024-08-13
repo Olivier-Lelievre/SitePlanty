@@ -62,6 +62,56 @@ li.menu-item a {
 
 
 
+
+
+/* FORMULAIRES */
+
+
+/* Formulaire Contact */
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"] {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  width: 100%;
+  height: 71px;
+  margin-top: 6px;
+}
+
+.wpcf7 textarea {
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+  width: 100%;
+  height: 237px;
+  margin-top: 6px;
+}
+
+.wpcf7-form label {
+  font-size: 20px;
+  color:#000000;
+}
+
+.wpcf7-submit {
+  display: flex;
+  margin: auto;
+  width: 198px;
+  height: 55px;
+  background-color: #E0B9B4 !important;
+}
+
+.wpcf7-submit:hover {
+  background-color: #C02E44 !important;
+  color: #ffffff !important;
+}
+
+
+
+
+
+
 /* FOOTER */
 
 .contenuFooter {
