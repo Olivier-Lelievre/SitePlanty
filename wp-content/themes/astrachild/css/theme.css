@@ -9,7 +9,7 @@ body * {
 
 
 
-/* FOOTER */
+/* HEADER */
 
 /* Les deux bt */
 li.menu-item a {
@@ -48,6 +48,16 @@ li.menu-item a {
    font-weight: 700;
  }
 
+
+
+
+
+/* ACCUEIL */
+
+.bt-commander {
+  width: 198px !important;
+  height: 55px;
+}
 
 
 
