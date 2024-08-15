@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.6.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-08 16:37:27+0000\n"
+"PO-Revision-Date: 2024-08-13 09:39:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -248,7 +248,7 @@ msgstr "Aperçu rapide des pages"
 
 #: wp-admin/about.php:95
 msgid "Block theme authors can create unlimited individual color or font sets to offer more specific design options within the same theme. These sets provide more contained design possibilities, allowing for customization without changing the site&#8217;s broader styling, beyond color or typography settings."
-msgstr "Les auteur·ices de thèmes basés sur les blocs peuvent créer un nombre illimité de palettes de couleurs ou de polices personnalisées pour offrir des options graphiques plus spécifiques au sein du même thème. Ces palettes offrent des possibilités graphiques plus harmonisées, permettant une personnalisation sans modifier le style global du site, au-delà des paramètres de couleur ou de typographie."
+msgstr "Les auteurs de thèmes basés sur les blocs peuvent créer un nombre illimité de palettes de couleurs ou de polices personnalisées pour offrir des options graphiques plus spécifiques au sein du même thème. Ces palettes offrent des possibilités graphiques plus harmonisées, permettant une personnalisation sans modifier le style global du site, au-delà des paramètres de couleur ou de typographie."
 
 #: wp-admin/about.php:95
 msgid "Add more design options to any block theme."
