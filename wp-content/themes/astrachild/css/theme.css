@@ -59,6 +59,11 @@ li.menu-item a {
 
 li.adminlink {
   align-content: center;
+  margin-right: 50px;
+}
+
+li.adminlink:hover {
+  font-weight: 500;
 }
 
 
@@ -259,19 +264,35 @@ li.adminlink {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
-.form-bas-filet {
-  border-left: none;
-  padding-left: 0px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
 
-.form-bas-sansfilet {
-  margin-left: 15px !important;
-  margin-right: 15px;
-}
   
 }
+
+
+
+/* medium devices (phones, less than 768px) */
+@media (max-width: 846px) {
+  
+  .TitreVotreCommande {
+    text-align: center;
+  }
+
+  .form-bas-sansfilet {
+    margin-left: 15px !important;
+    margin-right: 15px;
+  }
+
+  .form-bas-filet {
+    border-left: none;
+    padding-left: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+
+
   
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {

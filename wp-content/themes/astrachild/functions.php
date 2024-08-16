@@ -7,28 +7,104 @@ function theme_enqueue_styles(){
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     // Chargement du theme.css créé dans le thème enfant
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
+}
 
 
 
 
 add_filter('wp_nav_menu_items', 'astrachild_add_admin_link', 10, 2);
-function astrachild_add_admin_link($items, $args)
-    {
+function astrachild_add_admin_link($items, $args) {
+    if (is_user_logged_in()) {
+        // Crée le lien Admin
+        $admin_link = '<li class="adminlink"><a href="' . admin_url() . '">Admin</a></li>';
+        
+        // Séparer les items du menu en un tableau
+        $menu_items = explode('</li>', $items);
+        // Retirer les items vides
+        $menu_items = array_filter($menu_items);
+        
+        // Trouve la position où insérer le lien Admin
+        foreach ($menu_items as $index => $item) {
+            if (strpos($item, 'Nous rencontrer') !== false) {
+                // Insère le lien Admin après "Nous rencontrer"
+                array_splice($menu_items, $index + 1, 0, $admin_link);
+                break;
+            }
+        }
+        
+        // Recomposer les items du menu
+        $items = implode('</li>', $menu_items) . '</li>';
+    }
+    return $items;
+}
+
+
+
+
+
+
+
+/*function add_admin_link_to_menu($items, $args) {
+  if (is_user_logged_in() && current_user_can('administrator')) {
+      // Crée le lien Admin
+      $admin_link = '<li><a href="' . admin_url() . '">Admin</a></li>';
+
+      // Trouve la position où insérer le lien Admin
+      $meet_us_position = strpos($items, 'Nous rencontrer');
+      if ($meet_us_position !== false) {
+          $items = substr($items, 0, $meet_us_position) . $admin_link . substr($items, $meet_us_position);
+      }
+  }
+  return $items;
+}
+add_filter('wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2);
+
+
+
+
+/*add_filter('wp_nav_menu_items', 'astrachild_add_admin_link', 10, 2);
+function astrachild_add_admin_link($items, $args) {
+    if (is_user_logged_in()) {
+        // Crée le lien Admin
+        $admin_link = '<li class="adminlink"><a href="' . admin_url() . '">Admin</a></li>';
+        
+        // Séparer les items du menu en un tableau
+        $menu_items = explode('</li>', $items);
+        // Retirer les items vides
+        $menu_items = array_filter($menu_items);
+        
+        // Trouve la position où insérer le lien Admin
+        foreach ($menu_items as $index => $item) {
+            if (strpos($item, 'Nous rencontrer') !== false) {
+                // Insère le lien Admin après "Nous rencontrer"
+                array_splice($menu_items, $index + 1, 0, $admin_link);
+                break;
+            }
+        }
+        
+        // Recomposer les items du menu
+        $items = implode('</li>', $menu_items) . '</li>';
+    }
+    return $items;
+}
+
+
+
+/*add_filter('wp_nav_menu_items', 'astrachild_add_admin_link', 10, 2);
+function astrachild_add_admin_link($items, $args){
       if(is_user_logged_in())
       {
         $newitems = $items;
         $newitems .= '<li class="adminlink"><a href="'. admin_url() .'">Admin</a></li>';
       }
-
       return $newitems;
-    }
+} 
 
 
-    
-}
-
-
-
+/*
+// Insérer l'élément admin à la deuxième position
+$position = 1; // Position 1 pour que l'élément apparaisse en deuxième position (après le premier élément)
+array_splice($items_array, $position, 0, $admin_item);
 
 
 
