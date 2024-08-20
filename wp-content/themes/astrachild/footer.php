@@ -23,8 +23,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 <!-- DEBUT CODE AJOUTE -->
 
-<footer>
-	<div class="contenuFooter"><a href="#">Mentions légales</a></div>
+<footer class="childFooter">
+	<div class="contenuFooter"><a class="linkFooter" href="#">Mentions légales</a></div>
 </footer>
 
 <!-- FIN CODE AJOUTE -->
