@@ -10,13 +10,11 @@ function theme_enqueue_styles() {
 }
 
 
-// Création du lien Admin dans le menu du Header
+
+function astrachild_add_admin_link($items) {
+  if (is_user_logged_in())  {
+      $items .= '<li class="adminlink"><a href="'. get_admin_url() .'">Admin</a></li>';
+  }
+  return $items;
+}
 add_filter('wp_nav_menu_items', 'astrachild_add_admin_link', 10, 2);
-function astrachild_add_admin_link($items, $args){
-      if(is_user_logged_in())
-      {
-        $newitems = $items;
-        $newitems .= '<li class="adminlink"><a href="'. admin_url() .'">Admin</a></li>';
-      }
-      return $newitems;
-} 
